@@ -12,29 +12,29 @@ class StaffMember
 {
     /**
      * @ORM\Column(name="id", type="integer")
-     * @ORM\id
+     * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @var int
      */
     private $id;
     /**
-     * @ORM\Column(name="name", length="255")
+     * @ORM\Column(name="name", length=255)
      * @var string
      */
     private $name;
     /**
-     * @ORM\Column(name="email", length="255")
+     * @ORM\Column(name="email", length=255)
      * @var string
      */
     private $email;
     /**
-     * @ORM\Column(name="hip_chat_identifier", length="255")
+     * @ORM\Column(name="hip_chat_identifier", length=255)
      * @var string
      */
     private $SlackIdentifier;
 
     /**
-     * @ORM\OneToMany(targetEntity="Awin\Tools\CoffeeBreak\Entity\CoffeeBreakPreference", mappedBy("requestedBy")
+     * @ORM\OneToMany(targetEntity="Awin\Tools\CoffeeBreak\Entity\CoffeeBreakPreference", mappedBy="requestedBy")
      * @var ArrayCollection
      */
     private $preferences;
